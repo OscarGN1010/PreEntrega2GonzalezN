@@ -22,7 +22,7 @@ section.presentacion{
 div.presentacion__carta{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto auto 1fr 1fr;
+    grid-template-rows: 1fr 150px auto 60px 1fr;
     grid-template-areas:
         "foto1 foto1 foto1 foto1 foto2 foto2 foto2"
         "logo logo logo logo logo logo logo"
@@ -30,15 +30,27 @@ div.presentacion__carta{
         "txt2 txt2 txt2 txt2 txt2 txt2 txt2"
         "foto3 foto3 foto3 foto4 foto4 foto4 foto4";
     column-gap: 7px;
+    align-items: center;
 }
 
-@media (min-width: 400px){
-    
+@media (min-width: 768px){
+    div.presentacion__carta{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "foto1 foto1 foto2 logo logo logo"
+            "foto1 foto1 foto2 txt1 txt1 txt1"
+            "foto3 foto4 foto4 txt2 txt2 txt2"
+            "foto3 foto4 foto4 txt2 txt2 txt2";
+        column-gap: 7px;
+        justify-items: end;
+    }
 }
 
 div.presentacion__carta{
     padding: 7px;
-    height: 570px;
+    height: auto;
     border-radius: 10px;
     background-color: hsla(33, 36%, 46%, 0.79);
 }
@@ -68,7 +80,7 @@ div.presentacion__foto--4{
 }
 
 div.presentacion__logo{
-    padding: 10%;
+    margin: 20%;
     display: flex;
     grid-area: logo;
     justify-content: center;
@@ -82,14 +94,6 @@ div.presentacion__texto--1{
 div.presentacion__texto--2{
     grid-area: txt2;
     text-align: center;
-}
-
-section.productos{
-    
-}
-
-h1.productos{
-
 }
 
 div.productos{
