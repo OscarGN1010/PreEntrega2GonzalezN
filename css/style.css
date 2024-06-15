@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ol {
+    list-style-type: none;
+}
+ul {
+    list-style-type: none;
+}
+
+
+section.presentacion{
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.presentacion__carta{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto 1fr 1fr;
+    grid-template-areas:
+        "foto1 foto1 foto1 foto1 foto2 foto2 foto2"
+        "logo logo logo logo logo logo logo"
+        "txt1 txt1 txt1 txt1 txt1 txt1 txt1"
+        "txt2 txt2 txt2 txt2 txt2 txt2 txt2"
+        "foto3 foto3 foto3 foto4 foto4 foto4 foto4";
+    column-gap: 7px;
+}
+
+@media (min-width: 400px){
+    
+}
+
+div.presentacion__carta{
+    padding: 7px;
+    height: 570px;
+    border-radius: 10px;
+    background-color: hsla(33, 36%, 46%, 0.79);
+}
+
+div.presentacion__foto--1{
+    grid-area: foto1;
+    height: 100%;
+    width: 100%;
+}
+
+div.presentacion__foto--2{
+    grid-area: foto2;
+    height: 100%;
+    width: 100%;
+}
+
+div.presentacion__foto--3{
+    grid-area: foto3;
+    height: 100%;
+    width: 100%;
+}
+
+div.presentacion__foto--4{
+    grid-area: foto4;
+    height: 100%;
+    width: 100%;
+}
+
+div.presentacion__logo{
+    padding: 10%;
+    display: flex;
+    grid-area: logo;
+    justify-content: center;
+}
+
+div.presentacion__texto--1{
+    grid-area: txt1;
+    text-align: center;
+}
+
+div.presentacion__texto--2{
+    grid-area: txt2;
+    text-align: center;
+}
+
+section.productos{
+    
+}
+
+h1.productos{
+
+}
+
+div.productos{
+    padding: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+footer{
+    background-color: hsla(33, 36%, 46%, 0.79);
+    padding: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+}
