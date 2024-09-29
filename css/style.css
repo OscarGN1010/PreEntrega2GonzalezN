@@ -2,210 +2,231 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* estilo de header */
-header {
-    height: 80px;
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-header img{
-    height: 75%;
-    padding-left: 20px;
-}
-
-header nav ul {
-    padding-right: 30px ;
     list-style: none;
-    display: flex;
-    gap: 25px;
 }
-
-header nav ul li {
-    text-align: center;
-    display: inline-block;
-    margin-left: 10px;
-}
-
-header nav ul li a {
-    color: #340D00;
-    text-decoration: none;
-}
-
-header .cash {
-    display: flex;
-    justify-content: space-around;
-}
-
-header .cash div{
-    padding-right: 10px;
-}
-
-header .cash div a{
-    text-decoration: none;
-}
-
 
 /* estilos del main index */
 
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.inicio {
+    height: auto;
+}
+.inicio__carrusel {
+    height: auto;
 }
 
-.portada{
-    background-image: url('../assets/images/portada.png');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 85vh; /* 100% de la altura de la ventana */
-    /* tipografia portada */
-    font-family: "New Amsterdam", sans-serif;
+.carrusel__content {
+    height: auto;
+}
+
+.inicio__carrusel--section img {
+    overflow: hidden;
+    height: 300px; /* Ajusta la altura según tu necesidad */
+    object-fit: cover; /* Mantiene las proporciones y cubre toda el área */
+}
+
+.inicio__carrusel--section-text {
+    border-radius: 25px;
+    background-color: #844b3579;
+    font-family: "Archivo Black", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: #ffff;
 }
 
-main div {
-    display: inline-block;
-}
-
-main .texto {
-    padding-top: 95px;
-    text-align: center;
-    color: whitesmoke;
-    font-size: 35px;
-}
-
-.portada .texto h1 {
-    display: block;
-    letter-spacing: 10px;
-}
-
-main .boton{
-    background-color: #340D00;
-    display: inline-block;
-    padding: 10px;
-    margin-top: 100px;
-    border: 2px solid rgb(144,139,139);
-}
-
-main .boton a {
-    font-size: 30px;
-    color: aliceblue;
+.inicio__carrusel--section-text a {
     text-decoration: none;
+}
+
+.inicio__carrusel--section-text:hover {
+    background-color: #340d00bb;
+}
+
+.inicio__carrusel--section-text h3 , .inicio__carrusel--section-text h6 {
+    color: #ffff;
+}
+
+.inicio__carrusel--section-text h3 {
+    font-size: 1.2rem
+}
+
+.inicio__carrusel--section-text h6 {
+    display: none;
+    font-size: 0.8rem;
+}
+
+.inicio__carrusel--section-text p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffff;
+    display: none;
+    font-size: 0.8rem;
 }
 
 /* estilo de section */
 
-section {
-    padding: 70px 15px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
-
-section .img-logo img {
-    width: 30%;
-}
-
-section h2, h4{
-    padding-top: 10px;
-    font-family: "Lilita One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 70px;
-    color:#601C00 ;
-}
-
-section .descripcion-agencia{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 90px 20px;
-    gap: 20px;
-}
-
-section .descripcion-agencia .izq{
+.section{
+    padding: 20px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    text-align: center;
 }
 
-section .descripcion-agencia .texto {
+.section__wsp {
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+}
+
+.section__wsp--img:hover {
+    height: 60px;
+    width: 60px;
+}
+
+.section--font-text{
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
-    color:#844B35 ;
+}
+
+.section__title {
+    color: #340D00;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+.section__img-agencia {
+    padding-bottom:40px;
+}
+
+.section__img-agencia--img {
     width: 80%;
-    font-size: 50px;
-    display: inline-block;
-}
-
-
-section .descripcion-agencia .izq .presencia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-
-section .descripcion-agencia .izq .presencia a img {
-    height: 90px;
-}
-
-section .descripcion-agencia .img img {
-    width: 80%;
-    display: inline-block;
     border-radius: 20px;
 }
 
+.section__contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.section__contacto--subcontenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__contacto--text {
+    color:#844B35 ;
+    width: 80%;
+    font-size: 20px;
+}
+
+.section__contacto--img {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.section__contacto--img-position {
+    position: relative;
+    top: 25px;
+}
+
+.section__collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   	grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "uno uno dos"
+    "uno uno cinco"
+    "tres cuatro cuatro"
+    "tres cuatro cuatro";
+    gap: 10px;
+}
+
+.section__collage--img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    border-radius: 20px;
+    max-width: 100%;
+    max-height: 100%; 
+    object-fit: cover;
+}
+
+.section__collage--img-uno {
+    grid-area: uno;
+}
+
+.section__collage--img-dos {
+    grid-area: dos;
+}
+
+.section__collage--img-tres {
+    grid-area: tres;
+}
+
+.section__collage--img-cuatro {
+    grid-area: cuatro;
+}
+
+.section__collage--img-seis {
+    display: none;
+}
+
+.section__collage--img-cinco {
+    grid-area: cinco;
+}
+
+.section__collage--img-seis {
+    grid-area: seis;
+}
+
+.section__ubicacion {
+    padding-top: 70px;
+}
+
+.section__ubicacion--text {
+    padding-bottom: 1rem;
+    color: #391306;
+    font-size: 2rem;
+}
 
 /* estilos de footer */
 
 .footer {
     text-align: left;
     background-color: #340D00;
-    color: aliceblue;
     padding: 15px;
     display: flex;
-    font-size: 30px;
     gap: 50px;
-    ;
+    flex-wrap: wrap;
 }
-footer {
+
+.footer__container {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     font-style: normal;
+    color: aliceblue;
 }
 
-footer div ul {
-    list-style: none;
+.footer__container--title {
+    padding-bottom: 15px;
+    font-size: 30px;
 }
-footer div ul li a{
+
+.footer__container--text li a {
     text-decoration: none;
     color: azure;
     font-size: 20px;
 }
 
-footer div ul li p {
-    text-decoration: none;
-    color: azure;
-    font-size: 20px;
-}
-
-footer .derechos{
+.derechos{
+    width: 100%;
     background-color: black;
     color: whitesmoke;
     text-align: center;
@@ -216,66 +237,111 @@ footer .derechos{
 
 /* formulario de contacto */
 
-.main-contacto{
-    background-image: url('../assets/images/PRojas-sentado.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 90vh; /* 100% de la altura de la ventana */
-    /* tipografia portada */
-}
-
-.main-contacto .formulario form {
-    width: 80vh;
-    background-color: #844b358c;
-    border-radius: 50px;
-}
-
-
-
-.main-contacto .formulario form fieldset {
-    padding: 50px;
+.contacto {
+    height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.contacto__img {
     width: 100%;
-    height: 500px;
-    border-radius: 50px;
+    height: 250px;
 }
 
-.main-contacto .formulario form fieldset div {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 35px;
+.contacto__img--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+
+/* furmulario contacto */
+
+
+
+.contacto__formulario {
+    border-radius: 15px;
+    margin: 30px;
+    padding: 20px;
+    background-color: #391306;
+    color: aliceblue;
+
+}
+
+.contacto__formulario--container {
+    width:auto;
+}
+
+.contacto__formulario--position {
+    position: relative;
+    bottom: 100px;
+}
+
+.contacto__formulario--title {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.contacto__formulario--dato-persona {
+    display: inline-block;
+    padding: 0px 20px 10px 0px;
+}
+
+.contacto__formulario--mensaje textarea{
+    width: 100%;
+}
+
+.contacto__formulario--dato-persona input , .contacto__formulario--mensaje textarea {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background-color: #844b35;
+}
+
+.contacto__formulario--botton {
+    padding-top: 15px;
+    text-align: right;
+
+}
+
+.contacto__formulario--botton:active {
+    background-color: #340D00;
+}
+
+.contacto__formulario--botton input {
+    border-radius: 5px;
+    color: aliceblue;
+    background-color: #844b35;
+    padding: 5px;
+}
+
+.contacto__formulario--botton input:active {
+    background-color: hsl(15, 77%, 17%);
 }
 
 
-.main-contacto .formulario form fieldset div label {
-    padding-bottom: 10px;
-    font-family: "Roboto", sans-serif;
-
+.section__title {
+    padding-bottom: 50px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
 }
-
-.main-contacto .formulario form fieldset div input {
-    width: 190px;
-}
-
 
 /* PAGINA SERVICIOS */
 
 /* tarjetas de los servicios */
 
-.main-servicios{
+.servicios{
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    font-family:  "New Amsterdam", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #844B35;
 }
 
-.main-servicios h1{
+.servicios__title {
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -283,11 +349,15 @@ footer .derechos{
     color: #601C00;
 }
 
-.main-servicios h2 {
+.servicios__subtitle {
     padding: 15px 0px;
+    font-family:  "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #844B35;
 }
 
-.main-servicios .serviciosSPA {
+.servicios__cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -295,53 +365,153 @@ footer .derechos{
     gap: 15px;
 }
 
-.main-servicios .serviciosSPA .card {
+.servicios__cards--card {
     margin-bottom: 15px ;
     border: rgba(0, 0, 0, 0.252) 1px solid;
     border-radius: 10px ;
     width: 250px;
 }
 
-.main-servicios .serviciosSPA .card div img {
+.servicios__cards--img {
     width: 100%;
     border-radius: 10px 10px 0px 0px;
 }
 
-.main-servicios .serviciosSPA .card .text{
+.servicios__cards--text{
+    font-family:  "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #844B35;
     padding: 10px;
 }
 
-.main-servicios .serviciosSPA .card .text h4{
+.servicios__cards--text h4{
     font-size: 30px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #601C00;
 }
 
 
 /* PAGINA PREGUNTA FRECUENTE */
 
-.main-preguntasF .img {
+.preguntas-f {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preguntas-f__img {
     width: 100%;
     height: 300px;
 }
 
-.main-preguntasF div img {
+.preguntas-f__img--img {
     width: 100%;
     height: 100%;
     object-fit: cover ;
 }
 
-.main-preguntasF .preguntas {
+.preguntas-f__title {
+    padding-top: 30px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.preguntas-f__preguntas {
     padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.main-preguntasF .preguntas div {
+.preguntas-f__preguntas--pregunta {
     font-family: "Lilita One", sans-serif;
     color: #391306;
 }
 
-.main-preguntasF .preguntas div p{
-    padding-top: 10px;
-    color: #844B35
+.preguntas-f__preguntas--text {
+    color: hsl(17, 39%, 26%)
+}
+
+
+/* estilos de tablet */
+
+@media screen and (min-width: 600px) {
+    .section__logo {
+        height: 131px;
+        width: 553px;
+    }
+
+    .section__img-agencia--img {
+        height: 378px;
+        width: 553px;
+    }
+
+    .section__collage {
+        height: auto;
+        width: 553px;
+    }
+
+    .ser
+    .contacto__formulario {
+        width: 540px;
+    }
+
+    .preguntas-f__preguntas {
+        width: 600px;
+    }
+
+    .servicios__title {
+        font-size: 50px;
+    }
+
+    .servicios__subtitle {
+        font-size: 40px;
+    }
+
+}
+
+/*  estilo desktop */
+
+@media screen and (min-width:1024px){
+    .inicio__carrusel--section-text p ,.inicio__carrusel--section-text h6 {
+        display: block;
+    }
+    .section__title {
+        font-size: 45px;
+    }
+    .section__contacto--subcontenedor {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .section__collage {
+        width: 977px;
+        height: 750px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 170px);
+        grid-template-areas:         
+        "uno dos tres"
+        "cuatro dos tres"
+        "cuatro cinco tres"
+        "seis seis seis";
+    }
+
+    .section__contacto--text {
+        font-size: 30px;
+    }
+
+    .section__collage--img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .section__collage--img-seis {
+        display: block;
+    }
 }

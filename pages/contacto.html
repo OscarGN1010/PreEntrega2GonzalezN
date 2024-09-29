@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- link de mi css -->
+    <!-- link de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- link de mi css -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- link font New Amsterdam-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <!-- link font lilita one static  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=New+Amsterdam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--  -->
     <title>Contacto - Panorama</title>
 </head>
 
@@ -12,189 +23,205 @@
 <body>
 
     <header>
-
-        <!-- logo de mi emprendimiento -->
-        <img src="../assets/images/logo-vectorizado.png" alt="logo">
-        <!-- menu de navegacion -->
-        <nav>
-            <ul>
-                <li>
-                    <a href="../index.html">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="../pages/servicio.html">
-                        Servicio
-                    </a>
-                </li>
-                <li>
-                    <a href="../pages/quiene-somos.html">
-                        Quienes Somos
-                    </a>
-                </li>
-                <li>
-                    <a href="../pages/contacto.html">
-                        Contacto
-                    </a>
-                </li>
-                <li>
-                    <a href="../pages/preguntas-frecuentes.html">
-                        Preguntas frecuentes
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-
-        <div class="cash">
-            <div>
-                <a href="">
-                    CLP
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/images/logo-vectorizado.png" alt="Logo " height="50">
                 </a>
+                <!-- boton desplegable cuando se contrae la pantalla -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Opciones de navegacion -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./servicio.html">
+                                Servicios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">
+                                Nosotros
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./preguntas-frecuentes.html">
+                                Preguntas frecuentes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <a href="">
-                    USD
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    EU
-                </a>
-            </div>
-        </div>
+          </nav>
     </header>
     
-    <main class="main-contacto">
-        <h1> Dejanos tus mensajes</h1>
-        <!-- formulario -->
+    <main class="contacto">
 
-        <div class="formulario">
+        <div class="contacto__img">
+            <img src="../assets/images/PRojas-sentado.jpg" class="contacto__img--img" alt="Salar Piedras Rojas">
+        </div>
 
-            <form action="" method="">
+        <div class="contacto__formulario contacto__formulario--position">
+            <form action="" method="" class="contacto__formulario--container">
+                <!-- nombre de la seccion -->
+                <legend class="contacto__formulario--title">Contactanos!</legend>
 
-                <!-- seccion del formulatio -->
-                <fieldset>
+                <div class="contacto__formulario--dato-persona">
+                    <!-- campo para completar nombre -->
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
 
-                    <!-- nombre de la seccion -->
+                <div class="contacto__formulario--dato-persona">
+                    <!-- campo para completar apellido -->
+                    <label for="nombre">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required>                
+                </div>
 
-                    <div class="nombre">
-                        <!-- campo para completar nombre -->
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Escribir nombre">
-                    </div>
+                <div class="contacto__formulario--dato-persona">
+                    <!-- campo para correo electronico -->
+                    <label for="correo"> Email </label>
+                    <input type="email" id="correo" name="correo">
+                
+                </div>
 
-                    <div>
-                        <!-- campo para completar apellido -->
-                        <label for="nombre">Apellido</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Escribir apellido">
-                    </div>
+                <div class="contacto__formulario--dato-persona">
+                    <!-- campo para numero cel. -->
+                    <label for="correo"> Numero telefonico </label>
+                    <input type="cel" id="cel" name="cel">           
+                </div>
 
-                    <div class="mail">
-                        <!-- campo para correo electronico -->
-                        <label for="correo"> Email </label>
-                        <input type="email" id="correo" name="correo" required placeholder="Escribir correo">
-                    </div>
+                <div class="contacto__formulario--mensaje">
+                    <!-- campo para mensaje -->
+                    <label for="mensaje"> Dejanos tu mensaje </label>
+                    <textarea id="mensaje" name="mensaje" rows="5">
+                        
+                    </textarea>
+                </div>
 
-                    <div>    
-                        <!-- campo para mensaje -->
-                        <label for="mensaje-form"> Dejanos tu mensaje </label>
-                        <textarea id="mensaje" name="mensaje" rows="5" cols="30">
-                            
-                        </textarea>
-                    </div>
-
-                    <div class="boton-form">    
-                        <!-- botones de enviar y borrar-->
-                        <input type="submit" value="envianos tu consulta">
-                    </div>
-
-                </fieldset>
-
+                <div class="contacto__formulario--botton">    
+                    <!-- botones de enviar y borrar-->
+                    <input type="submit" value="enviar">
+                </div>
             </form>
         </div>
-
-
     </main>
 
-    <footer>
-        <div class="footer">
 
-            <div>
-                <h4>Nosotros</h4>
-                <ul>
-                    <li>
-                        <a href="./pages/quiene-somos.html" target="_blank">Quienes somos</a>
-                    </li>
-                    <li>
-                        <a href="./pages/quiene-somos.html" target="_blank">Equipo Chajnantor</a>
-                    </li>
-                    <li>
-                        <a href="https://g.co/kgs/JCSUiWH" target="_blank">Comentarios y reseñas</a>
-                    </li>
-                    <li>
-                        <a href="#map">Ubicacion</a>
-                    </li>
-                </ul>
-            </div>
+    <section class="section">
 
+        <div class="section__wsp">
+            <a href="https://wa.me/+56977606009">
+                <img src="../assets/images/wsp.png" class="section__wsp--img" alt="WhatsApp">
+            </a>
+        </div>
+        
+        <h1 class="section__title">
+            Conoce más sobre nuestros servicios
+        </h1>
 
-            <div>
-                <h4>Servicio</h4>
-                <ul>
-                    <li>
-                        <h5>Horario oficina</h5>
-                    </li>
-                    <li>
-                        <h6>Lunez a Viernes:</h6>    
-                    </li>
-                    <li>
-                        <p>10.00hrs a 20.00hrs</p>
-                    </li>
-                    <li>
-                        <h6>Sabado a Domingo:</h6>
-                    </li>
-                    <li>
-                        <p>10.00hrs a 20.00hrs</p>
-                    </li>
+        <div class="section__contacto">
+            <div class="section__contacto--img">
+                <a href="https://www.instagram.com/expediciones_chajnantor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                    <img src="../assets/images/instagram.png" alt="Instagram">
+                </a>
 
- 
-                    <li>
-                        <a href="./pages/servicio.html" target="_blank">#ExperienciaChajnantor</a>
-                    </li>
-                    <li>
-                        <a href="./pages/servicio.html">Conoce nuestro servicio</a>
-                    </li>
-                    <li>
-                        <a href="./pages/preguntas-frecuentes.html" target="_blank">Preguntas frecuentes</a>
-                    </li>
-                </ul>
-            </div>
-
-            
-            <div>
-                <h4>Contacto</h4>
-                <ul>
-                    <li>
-                        <a href="https://www.instagram.com/expediciones_chajnantor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="./pages/contacto.html" target="_blank">WhatsApp</a>
-                    </li>
-                    <li>
-                        <a href="./pages/contacto.html" target="_blank">Correo</a>
-                    </li>
-                    <li>
-                        <a href="https://www.tripadvisor.cl/Attraction_Review-g303681-d26980173-Reviews-Expediciones_Chajnantor-San_Pedro_de_Atacama_Antofagasta_Region.html" target="_blank">TripAdvisor</a>
-                    </li>
-                </ul>
+                <a href="https://www.tripadvisor.cl/Attraction_Review-g303681-d26980173-Reviews-Expediciones_Chajnantor-San_Pedro_de_Atacama_Antofagasta_Region.html" target="_blank">
+                    <img src="../assets/images/tripAdvisor.png" class=" section__contacto--img-position" alt="TripAdvisor">
+                </a>
+                            
+                <a href="https://g.co/kgs/JCSUiWH" target="_blank">
+                    <img src="../assets/images/google.png" alt="google">
+                </a>
             </div>
         </div>
-        <p class="derechos">todos los derechos reservados</p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <h4 class="footer__container--title">Nosotros</h4>
+            <ul class="footer__container--text">
+                <li>
+                    <a href="./nosotros.html" target="_blank">Quienes somos</a>
+                </li>
+                <li>
+                    <a href="./quiene-somos.html" target="_blank">Equipo Chajnantor</a>
+                </li>
+                <li>
+                    <a href="https://g.co/kgs/JCSUiWH" target="_blank">Comentarios y reseñas</a>
+                </li>
+                <li>
+                    <a href="https://maps.app.goo.gl/6ak8x63KFZGURfBa6" target="_blank">Ubicacion</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="footer__container">
+            <h4 class="footer__container--title">Servicio</h4>
+            <ul class="footer__container--text">
+                <li>
+                    <h5>Horario oficina</h5>
+                </li>
+                <li>
+                    <h6>Lunez a Viernes:</h6>    
+                </li>
+                <li>
+                    <p>10.00hrs a 20.00hrs</p>
+                </li>
+                <li>
+                    <h6>Sabado a Domingo:</h6>
+                </li>
+                <li>
+                    <p>10.00hrs a 20.00hrs</p>
+                </li>
+                <li>
+                    <a href="./servicio.html" target="_blank">#ExperienciaChajnantor</a>
+                </li>
+                <li>
+                    <a href="./servicio.html">Conoce nuestro servicio</a>
+                </li>
+                <li>
+                    <a href="./preguntas-frecuentes.html" target="_blank">Preguntas frecuentes</a>
+                </li>
+            </ul>
+        </div>
+
+            
+        <div class="footer__container">
+            <h4 class="footer__container--title">Contacto</h4>
+            <ul class="footer__container--text">
+                <li>
+                    <a href="https://www.instagram.com/expediciones_chajnantor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+                </li>
+                <li>
+                    <a href="./contacto.html" target="_blank">WhatsApp</a>
+                </li>
+                <li>
+                    <a href="./contacto.html" target="_blank">Correo</a>
+                </li>
+                <li>
+                    <a href="https://www.tripadvisor.cl/Attraction_Review-g303681-d26980173-Reviews-Expediciones_Chajnantor-San_Pedro_de_Atacama_Antofagasta_Region.html" target="_blank">TripAdvisor</a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
+    <p class="derechos">todos los derechos reservados</p>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 
